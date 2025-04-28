@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>task6</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            background-color: #141313;
+            font-family: Arial, sans-serif;
+            color: #333;
+        }
+        .container {
+            width: 300px;
+            height: 550px;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background-color: #2c2929;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+        .img {
+            width: 100px;
+            height: 100px;
+            background: url('avatar-jessica.jpeg') no-repeat center;
+            background-size: cover;
+            border-radius: 50%;
+            margin: 30px auto;
+        }
+        .text {
+            width: 250px;
+            height: 120px;
+            margin: 30px auto;
+            text-align: center;
+            font-size: 18px;
+            line-height: 1.5;
+            color: #fff;
+        }
+        .links {
+            display: grid;
+            width: 260px;
+            height: 170px;
+            gap: 10px;
+            margin: 30px auto;
+            text-align: center;
+            font-size: 29px;
+            background-color: #2c2929;
+        }
+        .links button {
+            background-color: #4f4a46;
+            color: white;
+            border: none;
+            padding: 10px;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+        .links button:hover {
+            background-color: #0f0c13;
+        }
+        .name{
+            font-size: 32px;
+
+        }
+        .leo{
+                color: rgba(252, 244, 5, 0.882);
+        }
+        .front{
+            color: #ffffff;
+            font-size: 14px;
+        }
+        @media screen and (max-width: 768px) {
+            .container {
+                width: 280px;
+                height: 520px;
+            }
+            .text {
+                width: 230px;
+                height: 110px;
+                font-size: 16px;
+            }
+            .links {
+                width: 240px;
+                height: 160px;
+                font-size: 24px;
+            }
+            .name {
+                font-size: 28px;
+            }
+        }
+
+        @media screen and (max-width: 480px) {
+            .container {
+                width: 260px;
+                height: 500px;
+            }
+            .text {
+                width: 220px;
+                height: 100px;
+                font-size: 14px;
+            }
+            .links {
+                width: 220px;
+                height: 150px;
+                font-size: 20px;
+            }
+            .name {
+                font-size: 24px;
+            }
+            .img {
+                width: 80px;
+                height: 80px;
+            }
+        }
+
+        @media screen and (min-width: 1024px) {
+            .container {
+                width: 320px;
+                height: 580px;
+            }
+            .text {
+                width: 270px;
+                height: 130px;
+                font-size: 20px;
+            }
+            .links {
+                width: 280px;
+                height: 180px;
+                font-size: 32px;
+            }
+            .name {
+                font-size: 36px;
+            }
+        }
+
+        
+    </style>
+</head>
+<body>
+<div class="container">
+        <div class="img">
+        </div>
+
+        <div class="text">
+            <p class="name">Jessica Randal</p>
+            <p class="leo">London , United Kingdom</p><br>
+            <p class="front">
+             'Senior Front-end developer' 
+            </p>
+            </div>
+        <div class="links">
+            <button> Github </button>
+            <button> Front-end monitor </button>
+            <button> Linkedin </button>
+            <button> Twitter </button>
+            <button> Instagram </button>
+
+        </div>
+
+
+</div>    
+</body>
+</html>
