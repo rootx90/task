@@ -1,0 +1,405 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shop - Zay eCommerce</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        .shop-hero {
+            background-color: #f8f9fa;
+            padding: 50px;
+            text-align: center;
+        }
+        
+        .shop-hero h2 {
+            font-size: 36px;
+            margin-bottom: 20px;
+        }
+        
+        .shop-container {
+            max-width: 1200px;
+            margin: 50px auto;
+            padding: 0 50px;
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 30px;
+        }
+        
+        .product-item {
+            background-color: #fff;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease;
+        }
+        
+        .product-item:hover {
+            transform: translateY(-5px);
+        }
+        
+        .product-image {
+            height: 200px;
+            overflow: hidden;
+        }
+        
+        .product-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.3s ease;
+        }
+        
+        .product-item:hover .product-image img {
+            transform: scale(1.05);
+        }
+        
+        .product-rating {
+            padding: 10px 15px;
+            color: #ffc107;
+        }
+        
+        .product-price {
+            padding: 0 15px;
+            font-weight: bold;
+            font-size: 18px;
+            color: #333;
+        }
+        
+        .product-item h3 {
+            padding: 10px 15px;
+            margin: 0;
+            font-size: 20px;
+        }
+        
+        .product-item p {
+            padding: 0 15px;
+            color: #666;
+            font-size: 14px;
+            line-height: 1.5;
+        }
+        
+        .product-reviews {
+            padding: 10px 15px;
+            color: #888;
+            font-size: 14px;
+            border-top: 1px solid #eee;
+            margin-top: 10px;
+        }
+        
+        /* Services Section */
+        .services-section {
+            padding: 80px 0;
+            text-align: center;
+            background-color: #fff;
+        }
+        
+        .services-section h2 {
+            font-size: 36px;
+            margin-bottom: 20px;
+            color: #333;
+        }
+        
+        .services-section p {
+            max-width: 700px;
+            margin: 0 auto 50px;
+            color: #666;
+        }
+        
+        .services-container {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 30px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        .service-item {
+            background-color: #fff;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+            width: 250px;
+            text-align: center;
+            transition: transform 0.3s ease;
+        }
+        
+        .service-item:hover {
+            transform: translateY(-10px);
+        }
+        
+        .service-icon {
+            font-size: 40px;
+            color: #4CAF50;
+            margin-bottom: 20px;
+        }
+        
+        .service-item h3 {
+            font-size: 20px;
+            margin-bottom: 15px;
+            color: #333;
+        }
+        
+        /* Brands Section */
+        .brands-section {
+            padding: 80px 0;
+            text-align: center;
+            background-color: #f8f9fa;
+        }
+        
+        .brands-section h2 {
+            font-size: 36px;
+            margin-bottom: 20px;
+            color: #333;
+        }
+        
+        .brands-section p {
+            max-width: 700px;
+            margin: 0 auto 50px;
+            color: #666;
+        }
+        
+        .brands-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 50px;
+            max-width: 1200px;
+            margin: 0 auto;
+            position: relative;
+        }
+        
+        .brand-item {
+            opacity: 0.7;
+            transition: opacity 0.3s ease;
+        }
+        
+        .brand-item:hover {
+            opacity: 1;
+        }
+        
+        .brand-item img {
+            max-width: 120px;
+            max-height: 60px;
+        }
+        
+        .brands-nav {
+            position: absolute;
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            top: 50%;
+            transform: translateY(-50%);
+        }
+        
+        .brands-nav button {
+            background: none;
+            border: none;
+            font-size: 24px;
+            color: #999;
+            cursor: pointer;
+            transition: color 0.3s ease;
+        }
+        
+        .brands-nav button:hover {
+            color: #333;
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="logo">
+            <h1><a href="index.html">Zay</a></h1>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="shop.html" class="active">Shop</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+        <div class="icons">
+            <a href="#" class="search-icon"><i class="fas fa-search"></i></a>
+            <a href="#" class="cart-icon"><i class="fas fa-shopping-cart"></i><span class="cart-count">7</span></a>
+            <a href="#" class="user-icon"><i class="fas fa-user"></i><span class="cart-total">+99</span></a>
+        </div>
+    </header>
+
+    <!-- Shop Hero Section -->
+    <section class="shop-hero">
+        <h2>Our Products</h2>
+        <p>Browse our latest collection of high-quality products</p>
+    </section>
+
+    <!-- Shop Products -->
+    <div class="shop-container">
+        <!-- Product 1 -->
+        <div class="product-item">
+            <div class="product-image">
+                <img src="images/flashlight.jpg" alt="Gym Weight">
+            </div>
+            <div class="product-rating">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="far fa-star"></i>
+                <i class="far fa-star"></i>
+            </div>
+            <div class="product-price">$240.00</div>
+            <h3>Gym Weight</h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt in culpa qui officia deserunt.</p>
+            <div class="product-reviews">Reviews (24)</div>
+        </div>
+        
+        <!-- Product 2 -->
+        <div class="product-item">
+            <div class="product-image">
+                <img src="images/watch-red.jpg" alt="Cloud Nike Shoes">
+            </div>
+            <div class="product-rating">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="far fa-star"></i>
+                <i class="far fa-star"></i>
+            </div>
+            <div class="product-price">$480.00</div>
+            <h3>Cloud Nike Shoes</h3>
+            <p>Aenean gravida dignissim finibus. Nullam ipsum diam, posuere vitae pharetra sed, commodo ullamcorper.</p>
+            <div class="product-reviews">Reviews (48)</div>
+        </div>
+        
+        <!-- Product 3 -->
+        <div class="product-item">
+            <div class="product-image">
+                <img src="images/camera.jpg" alt="Summer Addides Shoes">
+            </div>
+            <div class="product-rating">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+            </div>
+            <div class="product-price">$360.00</div>
+            <h3>Summer Addides Shoes</h3>
+            <p>Curabitur ac mi sit amet diam luctus porta. Phasellus pulvinar sagittis diam, et scelerisque ipsum lobortis nec.</p>
+            <div class="product-reviews">Reviews (74)</div>
+        </div>
+        
+        <!-- More products can be added here -->
+    </div>
+
+    <!-- Services Section -->
+    <section class="services-section">
+        <h2>Our Services</h2>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod Lorem ipsum dolor sit amet.</p>
+        <div class="services-container">
+            <div class="service-item">
+                <div class="service-icon">
+                    <i class="fas fa-truck"></i>
+                </div>
+                <h3>Delivery Services</h3>
+            </div>
+            <div class="service-item">
+                <div class="service-icon">
+                    <i class="fas fa-exchange-alt"></i>
+                </div>
+                <h3>Shipping & Return</h3>
+            </div>
+            <div class="service-item">
+                <div class="service-icon">
+                    <i class="fas fa-percent"></i>
+                </div>
+                <h3>Promotion</h3>
+            </div>
+            <div class="service-item">
+                <div class="service-icon">
+                    <i class="fas fa-user"></i>
+                </div>
+                <h3>24 Hours Service</h3>
+            </div>
+        </div>
+    </section>
+
+    <!-- Brands Section -->
+    <section class="brands-section">
+        <h2>Our Brands</h2>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod Lorem ipsum dolor sit amet.</p>
+        <div class="brands-container">
+            <div class="brands-nav">
+                <button class="prev-brand"><i class="fas fa-chevron-left"></i></button>
+                <button class="next-brand"><i class="fas fa-chevron-right"></i></button>
+            </div>
+            <div class="brand-item">
+                <img src="images/levis.png" alt="Levi's">
+            </div>
+            <div class="brand-item">
+                <img src="images/adidas.png" alt="Adidas">
+            </div>
+            <div class="brand-item">
+                <img src="images/nike.png" alt="Nike">
+            </div>
+            <div class="brand-item">
+                <img src="images/hm.png" alt="H&M">
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-container">
+            <div class="footer-column">
+                <h3>Zay Shop</h3>
+                <p><i class="fas fa-map-marker-alt"></i> 123 Consectetur at ligula 10660</p>
+                <p><i class="fas fa-phone"></i> 010-020-0340</p>
+                <p><i class="fas fa-envelope"></i> info@company.com</p>
+            </div>
+            <div class="footer-column">
+                <h3>Products</h3>
+                <ul>
+                    <li><a href="#">Luxury</a></li>
+                    <li><a href="#">Sport Wear</a></li>
+                    <li><a href="#">Men's Shoes</a></li>
+                    <li><a href="#">Women's Shoes</a></li>
+                    <li><a href="#">Popular Dress</a></li>
+                    <li><a href="#">Gym Accessories</a></li>
+                    <li><a href="#">Sport Shoes</a></li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h3>Further Info</h3>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="#">Shop Locations</a></li>
+                    <li><a href="#">FAQs</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h3>Newsletter</h3>
+                <p>Subscribe to our newsletter for updates</p>
+                <div class="newsletter-form">
+                    <input type="email" placeholder="Email address">
+                    <button type="submit">Subscribe</button>
+                </div>
+                <div class="social-icons">
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>Copyright © 2021 Company Name | Designed by <a href="#">TemplateMo</a></p>
+        </div>
+    </footer>
+</body>
+</html>
