@@ -1,0 +1,463 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Zay eCommerce</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Press+Start+2P&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"/>
+  <style>
+    body {
+      font-family: 'Inter', sans-serif;
+      line-height: 1.6;
+      color: #333;
+      padding-top: 60px;
+    }
+    .font-press-start {
+      font-family: 'Press Start 2P', cursive;
+    }
+
+    .main-header {
+  background-color: #1a202c; 
+  color: #ffffff;
+  padding: 16px 0;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+
+
+}
+
+.header-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 16px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  font-size: 24px;
+  font-weight: bold;
+  color: #10b981; 
+
+}
+
+.nav-menu a {
+  color: #ffffff;
+  text-decoration: none;
+  margin-left: 10px;
+  width: 100px;
+  transition: color 0.3s ease;
+}
+
+.nav-menu a:hover {
+  color: #10b981;
+}
+
+.header-icons {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  position: relative;
+}
+
+.icon-link {
+  color: #ffffff;
+  font-size: 18px;
+  position: relative;
+  transition: color 0.3s ease;
+}
+
+.icon-link:hover {
+  color: #10b981;
+}
+
+ 
+.hero-section {
+  background-color: #e5e7eb;
+  padding: 80px 20px;
+}
+
+.hero-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 40px;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.hero-text {
+  flex: 1 1 45%;
+  min-width: 300px;
+}
+
+.hero-image {
+  flex: 1 1 45%;
+  max-width: 500px;
+  height: auto;
+  border-radius: 12px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+}
+
+.hero-text h1 {
+  font-size: 48px;
+  font-weight: bold;
+  color: #1f2937;
+  margin-bottom: 20px;
+}
+
+.subheading {
+  font-size: 24px;
+  color: #374151;
+  margin-bottom: 20px;
+}
+
+.description {
+  color: #6b7280;
+  max-width: 700px;
+}
+
+.hero-image {
+    background-color: #e5e7eb;
+  max-width: 50%;
+  height: auto;
+  flex: 1 1 50%;
+  width: 100%;
+  border-radius: 12px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+}
+
+/* Categories */
+.categories-section {
+  background-color: #ffffff;
+  padding: 80px 20px;
+  text-align: center;
+}
+
+.categories-container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.categories-container h2 {
+  font-size: 36px;
+  font-weight: bold;
+  color: #1f2937;
+  margin-bottom: 20px;
+}
+
+.categories-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 40px;
+  margin-top: 40px;
+}
+
+.category-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.category-image {
+  width: 192px;
+  height: 192px;
+  object-fit: cover;
+  border-radius: 50%;
+  margin-bottom: 16px;
+}
+
+.category-item h3 {
+  font-size: 20px;
+  color: #374151;
+  margin-bottom: 12px;
+}
+
+.category-item button {
+  background-color: #10b981;
+  color: white;
+  border: none;
+  padding: 10px 24px;
+  border-radius: 9999px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.category-item button:hover {
+  background-color: #059669;
+}
+
+.featured-section {
+  background-color: #e5e7eb;
+  padding: 80px 20px;
+  text-align: center;
+}
+
+.featured-container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.featured-container h2 {
+  font-size: 36px;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.products-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 40px;
+  justify-content: center;
+  margin-top: 40px;
+}
+
+.product-card {
+  background-color: white;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.05);
+  max-width: 320px;
+}
+
+.product-card img {
+  width: 100%;
+  height: 192px;
+  object-fit: cover;
+}
+
+.product-content {
+  text-align: left;
+  padding: 20px;
+}
+
+.product-content h3 {
+  font-size: 20px;
+  color: #374151;
+  margin-bottom: 10px;
+}
+
+.product-desc {
+  font-size: 14px;
+  color: #6b7280;
+  margin-bottom: 16px;
+}
+
+.star-rating {
+  color: #facc15;
+  margin-bottom: 8px;
+}
+
+.product-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.price {
+  color: #059669;
+  font-weight: bold;
+  font-size: 18px;
+}
+
+.reviews {
+  font-size: 14px;
+  color: #6b7280;
+}
+    @media (min-width: 768px) {
+      .md\:flex {
+        display: flex;
+      }
+      .md\:grid-cols-3 {
+        grid-template-columns: repeat(3, 1fr);
+      }
+      .md\:space-x-6 > * + * {
+        margin-left: 1.5rem;
+      }
+      .md\:flex-row {
+        flex-direction: row;
+      }
+      .md\:mb-0 {
+        margin-bottom: 0;
+      }
+      .md\:pr-8 {
+        padding-right: 2rem;
+      }
+      .md\:text-left {
+        text-align: left;
+      }
+    }
+  </style>
+</head>
+<body class="bg-gray-100">
+    <header class="main-header">
+        <div class="header-container">
+          <div class="logo">Zay</div>
+    
+          <nav class="nav-menu">
+            <a href="index.html">Home</a>
+            <a href="about.html">About</a>
+            <a href="#">Shop</a>
+            <a href="contact.html">Contact</a>
+          </nav>
+    
+          <div class="header-icons">
+            <a href="#" class="icon-link"><i class="fas fa-search"></i></a>
+            <a href="#" class="icon-link cart-icon">
+              <i class="fas fa-shopping-cart"></i>
+              <span class="cart-count"> </span>
+            </a>
+          </div>
+        </div>
+      </header>
+
+      <section class="hero-section">
+        <div class="hero-container">
+          <div class="hero-text">
+            <h1>Zay eCommerce</h1>
+            <p class="subheading">Tiny and Perfect eCommerce Template</p>
+            <p class="description">
+              Zay Shop is an eCommerce HTML5 CSS template Lorem ipsum dolor, sit amet consectetur adipisicing elit. Molestias magni earum explicabo accusamus asperiores perspiciatis, incidunt est quos aliquam quidem repudiandae!
+            </p>
+          </div>
+          <img src="./img/banner_img_01.jpg" alt="Hero Image" class="hero-image"/>
+        </div>
+      </section>
+    
+      <!-- Categories -->
+      <section class="categories-section">
+        <div class="categories-container">
+          <h2>Categories of The Month</h2>
+          <p class="description">
+            Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+          </p>
+          <div class="categories-grid">
+            <div class="category-item">
+              <img src="./img/category_img_01.jpg" alt="Watches" class="category-image"/>
+              <h3>Watches</h3>
+              <button>Go Shop</button>
+            </div>
+            <div class="category-item">
+              <img src="./img/category_img_02.jpg" alt="Shoes" class="category-image"/>
+              <h3>Shoes</h3>
+              <button>Go Shop</button>
+            </div>
+            <div class="category-item">
+              <img src="./img/category_img_03.jpg" alt="Accessories" class="category-image"/>
+              <h3>Accessories</h3>
+              <button>Go Shop</button>
+            </div>
+          </div>
+        </div>
+      </section>
+    
+      <section class="featured-section">
+        <div class="featured-container">
+          <h2>Featured Product</h2>
+          <p class="description">
+            Reprehenderit in voluptate velit Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellendus aspernatur voluptatibus non provident? Ipsa, aspernatur voluptatem vel, tempore id ullam ea aperiam quas, doloremque laudantium nesciunt porro mollitia maxime incidunt?
+          </p>
+          <div class="products-grid">
+            <div class="product-card">
+              <img src="./img/feature_prod_01.jpg" alt="Gym Weight" />
+              <div class="product-content">
+                <div class="star-rating">
+                  <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i>
+                </div>
+                <h3>Gym Weight</h3>
+                <p class="product-desc">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+                <div class="product-footer">
+                  <span class="price">$240.00</span>
+                  <span class="reviews">Reviews (48)</span>
+                </div>
+              </div>
+            </div>
+            <div class="product-card">
+              <img src="./img/feature_prod_02.jpg" alt="Cloud Nike Shoes" />
+              <div class="product-content">
+                <div class="star-rating">
+                  <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                </div>
+                <h3>Cloud Nike Shoes</h3>
+                <p class="product-desc">Aenean gravida dignissim finibus. Nullam ipsum diam.</p>
+                <div class="product-footer">
+                  <span class="price">$480.00</span>
+                  <span class="reviews">Reviews (74)</span>
+                </div>
+              </div>
+            </div>
+            <div class="product-card">
+              <img src="./img/feature_prod_03.jpg" alt="Summer Adidas Shoes" />
+              <div class="product-content">
+                <div class="star-rating">
+                  <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                </div>
+                <h3>Summer Adidas Shoes</h3>
+                <p class="product-desc">Curabitur ac mi sit amet diam luctus porta.</p>
+                <div class="product-footer">
+                  <span class="price">$360.00</span>
+                  <span class="reviews">Reviews (74)</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+  <footer class="bg-gray-900 text-gray-300 py-12">
+    <div class="container mx-auto grid grid-cols-1 md:grid-cols-4 gap-8 px-4">
+      <div>
+        <h3 class="text-2xl font-bold text-green-500 mb-4">Zay Shop</h3>
+        <p class="mb-2"><i class="fas fa-map-marker-alt mr-2"></i> 123 Consectetur at ligula 10660</p>
+        <p class="mb-2"><i class="fas fa-phone mr-2"></i> 010-020-0340</p>
+        <p class="mb-2"><i class="fas fa-envelope mr-2"></i> info@company.com</p>
+      </div>
+      <div>
+        <h4 class="text-xl font-semibold text-white mb-4">Products</h4>
+        <ul>
+          <li class="mb-2"><a href="#" class="hover:text-green-500">Luxury</a></li>
+          <li class="mb-2"><a href="#" class="hover:text-green-500">Sport Wear</a></li>
+          <li class="mb-2"><a href="#" class="hover:text-green-500">Men's Shoes</a></li>
+          <li class="mb-2"><a href="#" class="hover:text-green-500">Women's Shoes</a></li>
+          <li class="mb-2"><a href="#" class="hover:text-green-500">Popular Dress</a></li>
+          <li class="mb-2"><a href="#" class="hover:text-green-500">Gym Accessories</a></li>
+          <li class="mb-2"><a href="#" class="hover:text-green-500">Sport Shoes</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4 class="text-xl font-semibold text-white mb-4">Further Info</h4>
+        <ul>
+          <li class="mb-2"><a href="index.html" class="hover:text-green-500">Home</a></li>
+          <li class="mb-2"><a href="about.html" class="hover:text-green-500">About Us</a></li>
+          <li class="mb-2"><a href="#" class="hover:text-green-500">Shop Locations</a></li>
+          <li class="mb-2"><a href="#" class="hover:text-green-500">FAQs</a></li>
+          <li class="mb-2"><a href="contact.html" class="hover:text-green-500">Contact</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4 class="text-xl font-semibold text-white mb-4">Newsletter</h4>
+        <form>
+          <input type="email" placeholder="Email address" class="w-full px-4 py-2 rounded-md bg-gray-800 text-white mb-4 focus:outline-none focus:ring-2 focus:ring-green-500"/>
+          <button type="submit" class="bg-green-500 text-white px-6 py-2 rounded-md hover:bg-green-600 w-full">Subscribe</button>
+        </form>
+        <div class="flex space-x-4 mt-6">
+          <a href="#" class="text-gray-300 hover:text-green-500 text-2xl"><i class="fab fa-facebook-f"></i></a>
+          <a href="#" class="text-gray-300 hover:text-green-500 text-2xl"><i class="fab fa-instagram"></i></a>
+          <a href="#" class="text-gray-300 hover:text-green-500 text-2xl"><i class="fab fa-twitter"></i></a>
+          <a href="#" class="text-gray-300 hover:text-green-500 text-2xl"><i class="fab fa-linkedin-in"></i></a>
+        </div>
+      </div>
+    </div>
+    <div class="text-center mt-8 text-gray-500 text-sm">
+        © 2025  Shop. All rights reserved.
+    </div>
+  </footer>
+</body>
+</html>
